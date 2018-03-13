@@ -17,3 +17,9 @@ export const loadDataFailure = () => {
         type: ACTIONS.IP.LOAD_DATA_FAILURE
     }
 }
+
+export const loadDataFake = () => {
+    return {
+        type: ACTIONS.IP.LOAD_DATA_FAKE
+    }
+}

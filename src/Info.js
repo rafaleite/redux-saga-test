@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { loadDataRequest } from './_actions/ip.action'
+import { loadDataRequest, loadDataFake } from './_actions/ip.action'
 import { connect } from 'react-redux'
 
 class Info extends Component { 
@@ -8,6 +8,7 @@ class Info extends Component {
             <div>
                 <h1>IP INFO</h1>
                 <button onClick={() => this.props.loadData()} > Teste </button>
+                <button onClick={() => this.props.loadDataFake()} > Teste FAKE </button>
             </div>
         )
     }
@@ -23,7 +24,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        loadData: () => dispatch(loadDataRequest())
+        loadData: () => dispatch(loadDataRequest()),
+        loadDataFake: () => dispatch(loadDataFake())
     }
 }
 
