@@ -6,7 +6,11 @@ class Info extends Component {
     render(){
         return (
             <div>
-                <h1>IP INFO</h1>
+                <h1>DATA: {this.props.data} 
+                    {this.props.isFetching &&
+                        <div>carregando ...</div>
+                    }
+                </h1>
                 <button onClick={() => this.props.loadData()} > Teste </button>
                 <button onClick={() => this.props.loadDataFake()} > Teste FAKE </button>
             </div>

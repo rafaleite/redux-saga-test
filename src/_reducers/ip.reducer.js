@@ -7,7 +7,6 @@ const INITIAL_STATE = {
 }
 
 const ip = (state = INITIAL_STATE, action) => {
-    console.log(action)
     switch (action.type) {
         case ACTIONS.IP.LOAD_DATA_REQUEST:
             return {
@@ -26,6 +25,12 @@ const ip = (state = INITIAL_STATE, action) => {
                 isFetching: false,
                 data: [],
                 error: true
+            }
+        case ACTIONS.IP.LOAD_DATA_FAKE:
+            return {
+                isFetching: true,
+                data: [],
+                error: false
             }
         default:
             return state
